@@ -1,0 +1,92 @@
+What is software testing?
+    identify the correctness and quality of the application
+
+How many ways can we actually test?
+    1.manual
+    2.automation
+
+When do we go for automation?
+    1.after manual testing is passed
+    2.when environment is stable
+    3.analyze our test suite and choose our automation tools
+
+What automation tools do we know about?
+    Selenium, TestNG, Cucumber, Katalon Studio, UFT/QTP
+
+Level of testing
+    1. Unit testing (dev)
+    2. Integration testing
+    3. Acceptance testing (client)
+    4. System testing
+
+Types of testing?
+    1. Functional testing
+    2. Non-functional testing
+        - Performance testing: how a system works under specific workloads (the response time)
+        - Security testing:
+
+What is Selenium?
+    a set of tools which helps us to automate web applications. It is mainly used to perform functional testing
+
+Selenium Components:
+Selenium IDE -> integrated development environment
+Selenium Grid -> Firefox plugin
+Selenium WebDriver
+Selenium RC -> Remote control
+
+What is selenium webdriver?
+Open source (free) automation tool which allows us to perform actions on a web applications
+WebDriver is an Interface
+
+Advantages of Selenium WebDriver:
+    1. Open Source
+    2. Works with different browsers and supports cross browsing testing
+    3. Works with different programming languages --> Java, JS, Ruby, Python
+    4. OS independent --> iOS, Windows, Linux
+
+Disadvantages of Selenium WebDriver:
+    1. Cannot test desktop applications
+    2. No technical support
+    3. No built-in reports
+    4. Cannot test captchas, images or videos (only done by manual testing)
+    5. Only test functionality
+
+get() vs navigate()
+    nevigate can go back and forward and refresh
+    get() will wait for the page to fully load whereas navigate() will not
+    get() will not keep the history of the browser whereas navigate() will
+
+close() vs quit()
+    close() will close the current tab
+    quit() will quit the whole browser
+
+fullscreen() vs mazimize()
+    maximize() will maximize the browser and you will still be able to see the control panel (back and forward, bookmark)
+    fullscreen() will maximize the whole application
+
+
+
+
+
+
+
+public static void main(String[] args) {
+    // before we start on testing an app we need to set property, where our drivers are located
+                       // driver we use       , path
+    System.setProperty("webdriver.chrome.driver","drivers/chromedriver"); // if windows, add .exe
+    // create an object of webdriver interface using 'new ChromeDriver();
+    WebDriver driver = new ChromeDriver();
+    // setting an url for driver to launch
+    driver.get("https://www.google.com");
+    // accessing the current website url
+    String url = driver.getCurrentUrl();
+    System.out.println(url);
+    // accessing the current website title
+    String title = driver.getTitle();
+    System.out.println(title);
+
+    // after work done, close the browser by:
+    driver.quit();
+
+
+}
