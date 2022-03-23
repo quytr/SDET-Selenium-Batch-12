@@ -1,0 +1,70 @@
+Why do we need Xpath and CSS Selector?
+    Developers will not provide all the locators in html
+    By using Xpath and css we can identify elements with any given attributes
+
+What is an Xpath?
+    Xpath is like a query language which helps us to identify elements uniquely on the web page.
+
+2 types of Xpath:
+    1. Native Xpath (absolute)
+    --> starts from the starting node in html.
+        It always starts with single slash /
+        ex: /html/body/div/div/div
+
+    2. Relative Xpath
+        starts from any node in the html
+        it always starts with double slash //
+
+Syntax for relative xpath:
+    //tagname[@attribute='attribute_value']
+    ex://input[@id='email']
+using @ sign for attribute
+
+Identifying elements by its text:
+    //tagname[text()='text_value']
+    ex: //a[text()='Create new account']
+    //h2[text() = 'Connect with friends and the world around you on Facebook.']
+
+Identifying elements by using contains method:
+    //tagname[contains(@attribute, 'partial_attribute_value')]
+    ex: //input[contains(@placeholder, 'Email')]
+
+starts-with will identify the element with partial starting value:
+    //tagname[starts-with(@attribute, 'partial_starting_attribute_value')]
+    ex: //button[starts-with(@data-testid, 'royal')]
+
+ends-with was used in xpath 1.0, we are using 2.0 and this method is not available.
+<div> -- division
+<img> -- image
+<h> -- header
+<p> -- paragraph
+<li> -- list
+<ul> -- unordered list
+<ol> -- ordered list
+<br> -- breaking line
+
+Advance Xpath:
+    is based on parent and child, sibling relationships
+    (when we cannot locate the unique locator because it's not unique)
+
+Identifying elements by following sibling
+    //tagname[@attribute='attribute_value']/following-sibling::sibling_tagname
+    ex: //input[@id='calFromDate']/following-sibling::img
+
+Identifying elements by preceding siblings:
+    //tagname[@attribute='attribute_value']/preceding-sibling::sibling_tagname
+    ex: //span[text()='& Orders']/preceding-sibling::span
+    //input[@id='calFromDate']/preceding-sibling::label
+
+Identifying elements by parents:
+    //tagname[@attribute='attribute_value]/parent::parent_tagname
+    ex: //span[text()='& Orders']/parent::a
+
+Identifying elements by its ancestor:
+    //tagname[@attribute='attribute_value]/ancestor::acestor_tagname
+    ex: //input[@id='email']/ancestor::form
+
+Identying elements by index:
+    ex: (//img[@class='ui-datepicker-trigger'])[2]
+
+
