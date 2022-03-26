@@ -1,0 +1,51 @@
+Review Class 1:
+Why are we using selenium?
+    using selenium to save times, money, and resources.
+    if we find any bugs, then we can report to developers.
+
+library -- to import and have access for all methods.
+driver -- to access the websites
+WebDriver driver = new ChromeDriver(); --creating an instant of chrome driver
+
+1. driver.get()
+2. driver.navigate().to()
+    driver.navigate().to("http://gmail.com");
+        we can go back and forward, refresh
+        wait for the page to fully load
+3. driver.quit() -- quit all the browser
+4. driver.close()  -- close the current tab
+5. driver.maximize()
+
+HTML: is a language, that has particular structure, by using this particular structure, front end developers can build
+a website.
+attribute:
+    to decide the attributes/property/quality/format.
+    to identify particular attribute uniquely.
+
+<div>:
+    to divide that page to sections.
+
+DOM:
+
+Locators:
+    to locate web elements (whatever you see on the web page is web element)
+
+Why do we need to access those elements?
+    to perform actions
+How?
+    using different locators in selenium to locate them.
+How many locators are there? 8
+    1. ID
+    2. Name
+    3. Xpath
+    4. CSS Selector
+    5. Link Text
+    6. Partial Link Text
+    7. Tag name
+    8. Classname
+
+
+
+
+
+
