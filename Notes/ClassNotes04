@@ -42,13 +42,13 @@ Xpath vs CSS:
 WebElement Commands:
     Consists of several methods where we can perform an action and get the element state on the webpage.
 
-    isEnabled() -> boolean value
-    isDisplayed() -> boolean value
-    isSelected() -> boolean value
-    clear() -> void method (not return anything)
-    getText() -> String value
-    getAttribute() -> String value
-    submit() -> void
+    1. isEnabled() -> boolean value
+    2. isDisplayed() -> boolean value
+    3. isSelected() -> boolean value
+    4. clear() -> void method (not return anything)
+    5. getText() -> String value
+    6. getAttribute() -> String value
+    7. submit() -> void
 
 
 

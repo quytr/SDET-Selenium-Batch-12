@@ -1,0 +1,40 @@
+Radio Buttons:
+    - Cannot unselect.
+    - Can only select one option.
+    - Circle box.
+
+CheckBoxes:
+    - Can select and unselect.
+    - Can select multiple options.
+    - Square box.
+
+Handling Checkboxes and Radio Buttons:
+    If you have only 1 checkbox or radiobutton - you can just click on it.
+    If you have multiple choices - store them in List (it will return Array List) and loop through.
+
+DropDowns:
+    Dropdown is a menu which gives us an opportunity to select one or more options.
+
+Types of dropdowns:
+    1. Single select
+    2. Multiple select
+
+Handling dropdowns: (handling = interact with dropdowns)
+    1. Click on dropdown and click on the option.
+    2. Using Select Class: in order to use Select Class, we need to make sure our dropdown has select tag.
+
+Selecting an option from a dropdown can be done in 3 ways:
+    1. By index: select.selectByIndex(index_number)  //indexing starts from 0
+    2. By visible text: select.selectByVisibleText(String_value)
+    3. By value:  select.selectByValue(attribute_value)
+
+Select Class is import from Selenium library.
+Select select = new Select();
+
+Whenever you interact with multiple elements, you store them inside the container such as List, Set...
+
+To deselect in ONLY multiple DD:
+    1. deselectAll()
+    2. deselectByIndex(index_number)
+    3. deselectByVisibleText()
+    4. deselectByValue()
