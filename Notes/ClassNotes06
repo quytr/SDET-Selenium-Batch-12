@@ -1,0 +1,48 @@
+Alert:
+    Alert is a pop up message. Alert takes a complete focus of our main page that we are working on.
+    We cannot proceed until it is handled.
+
+3 types of alerts:
+    1. Web based alert/ html alerts - we can simply inspect and perform need actions.
+    2. JavaScript alerts/ browser alerts - we can handle these alerts by using switchTo method we cannot inspect.
+    3. Windows based alerts - we cannot handle with Selenium
+
+Types of JS alerts:
+    1. Simple alert - click ok
+    2. Confirmation alert - either cancel or click ok
+    3. Prompt alert - enter the text and then click ok or cancel.
+
+To handle JS alerts, we only have 4 methods:
+    1. accept() - click ok
+    2. dismiss() - click cancel
+    3. getText()
+    4. sendKeys()
+
+getText() on WebElement and getText() on Alert() are different because they are from different interface and the
+functionalities are different. One is looking out for WebElement. And one is look out for the alert pop up. There is
+no method overriding, they are not extended each other. They are just the same name.
+
+Authentication Alert:
+    1. To handle authentication alert, we need to pass username and password on url.
+    2. username:password@ in front of the link starts, right after https://
+    ex: "https://admin:admin@the-internet.herokuapp.com/basic_auth"
+    3. username:password@ Method ONLY works for authentication alert
+
+Frames:
+    Frame is the separate independent window in our webpage.
+    Frames allow developers to represent multiple views on one page.
+
+3 ways to interact with Frames:
+    1. by index
+    2. by name or ID
+    3. by WebElement
+
+in alerts - switch to alert and switch automatically back.
+in frames - switch to a frame manually and switch manually back to the main page.
+     driver.switchTo().frame(0);  //switch to frame
+     driver.switchTo().defaultContent();  //switch to the main page
+to search for iframe: //iframe in the search box
+
+*Interview*
+How do you handle alert in selenium?
+    We handle alert by using Alert interface.
