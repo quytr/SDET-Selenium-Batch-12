@@ -1,7 +1,7 @@
 Handling multiple windows (tabs):
     In order to handle multiple windows we will be using:
-        1. getWindowHandle()
-        2. getWindowHandles()
+        1. getWindowHandle()  --> getting String value in return
+        2. getWindowHandles() --> getting a SET of unique ID that holds the address of the window
 
 WindowHandle:
     is a unique ID that holds the address of the window or a tab.
@@ -18,7 +18,7 @@ Types of selenium waits:
     2. Explicit wait
     3. Fluent wait
 
-Implicit wait:
+Implicit wait -- Global Wait (Entire script)
     - It tells the WebDriver to wait for a certain amount of time before throwing an exception.
     - It will only be written once and will be applied to the whole session of the execution.
     - We can say that Implicit wait is a global wait.
