@@ -1,0 +1,30 @@
+
+Tables divided into several psges, the navigation bar is called PAGINATION.
+
+
+Every time we move to the next page and the next page is reloaded. we have to relocate the element.
+
+Interview Error:
+Error: StaleElementReferenceException - the worst error
+    there some wrong with your element, it works before but somehow it doesn't work.
+
+// interview question of the day --> stale element reference exception.
+*anything causes reload/refresh the whole page (ex: click to nextpage);
+*webdriver is not able to retrieve the elements of the page we already located because page is reloaded/refreshed (not table itselfs, whole page)
+*the elements we located are changed. selenium forgets about them. because the referenced web element is no longer attached to the DOM.
+*if we want to avoid from that exception on refresh/reload situation, we need to get/locate every element after each refresh/reload again.
+*we can use loop so that we can get webelements every time we are going through the loop.
+
+
+Calendar:
+
+
+
+
+
+
+
+
+
+
+
