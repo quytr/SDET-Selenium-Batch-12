@@ -1,5 +1,5 @@
 
-Tables divided into several psges, the navigation bar is called PAGINATION.
+Tables (many pages) divided into several pages, the navigation bar is called PAGINATION.
 
 
 Every time we move to the next page and the next page is reloaded. we have to relocate the element.
@@ -17,6 +17,7 @@ Error: StaleElementReferenceException - the worst error
 
 
 Calendar:
+    are also known as date-pickers
 
 
 

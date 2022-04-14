@@ -5,10 +5,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class BrowserOpenClose {
+public class CommonMethods {
     /*
     Create package SeleniumUtil and create 2 methods:
-openBrowser() and close/quitBrowser().  for openBrowser() you neet to pass argument as URL
+openBrowser() and close/quitBrowser().  for openBrowser() you meet to pass argument as URL
      */
     public static WebDriver driver;
     public static void openBrowser(String url){

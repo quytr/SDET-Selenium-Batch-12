@@ -1,7 +1,7 @@
 package com.syntax.class09;
 
 
-import static com.syntax.util.BrowserOpenClose.*;
+import static com.syntax.util.CommonMethods.*;
 
 public class BrowserTester {
 
