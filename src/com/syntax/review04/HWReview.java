@@ -17,7 +17,7 @@ public class HWReview {
     public static String url = "https://the-internet.herokuapp.com/dynamic_controls";
 
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "drvr/dr/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get(url);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
