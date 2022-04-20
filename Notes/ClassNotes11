@@ -1,0 +1,53 @@
+
+If regular click does not work, you can use the alternative way of having Actions class click method.
+
+Upload Documents:
+    In order to upload document using selenium, we can simply use sendKeys(filePath)
+    If sendKeys does not work, you can use Robot class
+
+JavaScriptExecutor
+    It is a library in selenium which can be executed in different programming languages.
+    (java, c#, python etc)
+
+JSExecutor is an interface
+Actions which can be performed by using JSExecutor:
+    Click on the element
+    Scroll through the page
+    Refresh the page
+    Highlight an element
+    Scroll to a specific element
+    Open a new tab
+
+memory the syntax:
+     JavascriptExecutor js = (JavascriptExecutor) driver;
+1. To highlight: 0 is the starting point:
+    "arguments[0].style.backgroundColor='yellow'"
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].style.backgroundColor='yellow'",username);
+            js.executeScript("arguments[0].style.backgroundColor='green'",password);
+
+2. To click:
+    When .click() doesnt work, then use action.click(). If it doesnt work, then use the JavascriptExecutor
+        js.executeScript("arguments[0].click()", loginButton);
+
+3. Scroll down: start point at 0, end point at positive number to scroll down:
+    js.executeScript("window.scrollBy(0, 500)");
+
+4. Scroll up: start point at 0, end point at negative number to scroll up:
+     js.executeScript("window.scrollBy(0, -500)");
+
+5. Scroll to a specific element:
+      js.executeScript("arguments[0].scrollIntoView(true)", backtoTopButton);
+
+6. Open a new tab:
+     js.executeScript("window,open();");
+     js.executeScript("window,open('http://amazon.com');");  // to open the specify website
+
+
+
+
+
+
+
+
+
