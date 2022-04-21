@@ -1,19 +1,22 @@
 package com.syntax.review04;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Iterator;
 import java.util.Set;
-
-import static com.syntax.util.CommonMethods.driver;
-import static com.syntax.util.CommonMethods.openBrowser;
+import java.util.concurrent.TimeUnit;
 
 public class WindowsHandle {
-
+    public static String url = "https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
     public static void main(String[] args) {
-        openBrowser("https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
+        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get(url);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         WebElement helpBtn = driver.findElement(By.xpath("//a[text()='Help']"));
         WebElement privacyBtn = driver.findElement(By.xpath("//a[text()='Privacy']"));
