@@ -1,0 +1,40 @@
+
+testBase
+    baseClass: a driver is in base class
+        navigate to specific url (open a browser)
+            declare implicitWait to apply a whole scenario
+            declare driver outside the method, inside the class for global use.
+        close the browser
+
+utils
+    CommonMethods extends baseClass
+        screenshot
+        sendText()
+        clear()
+        iframeSwitch()
+        waits
+
+pages: extends CommonMethods
+(contains the locators to WebElements)
+     loginPage
+     DashboardPage
+     addEmployeePage
+
+     or
+
+     pageFactory
+        in pageFactory, we can use @FindBy annotation to find elements instead of driver.findElement()
+        Page Factory is a class provided by Selenium WebDriver to support Page Object Design patterns.
+        In Page Factory, testers use @FindBy annotation. The initElements method is used to initialize web elements.
+        Similarly, one can use @FindBy with different location strategies to find web elements and perform actions
+        on them.
+
+test
+    loginPageTest
+    DashBoardTest
+
+
+
+
+
+
